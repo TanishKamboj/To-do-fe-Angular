@@ -1,0 +1,16 @@
+<!--For loop-->
+<div
+  *ngFor="let tag of taskTags"
+  class="inline-flex flex-nowrap items-center bg-white border border-gray-200 rounded-full p-1.5 pe-3 dark:bg-slate-900 dark:border-gray-700"
+>
+  <img
+    class="me-1.5 inline-block h-6 w-6 rounded-full"
+    [src]="tagData[tag].imgLink"
+    alt="Image Description"
+  />
+  <div
+    class="whitespace-nowrap text-sm font-medium text-gray-800 dark:text-white"
+  >
+    {{ tagData[tag].title }}
+  </div>
+</div>

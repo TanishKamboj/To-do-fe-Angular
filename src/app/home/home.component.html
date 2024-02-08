@@ -1,0 +1,7 @@
+<div class="flex-1 bg-slate-900 text-cyan-50">
+  <div class="grid grid-cols-2 gap-4 mx-auto mt-10 pl-28">
+    <div *ngFor="let task of taskList">
+      <app-task-card [taskData]="task"></app-task-card>
+    </div>
+  </div>
+</div>
