@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { GetResultObject, ToDoTask } from '../todo.interface';
+import { GetResultObject, ToDoTask, addTaskInterface, getPostObject } from '../todo.interface';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,9 @@ export class TodoService {
       }
     );
     return this.taskData;
+  }
+
+  postTaskList(requestData: addTaskInterface): Observable<getPostObject> {
+    return this.http.post<getPostObject>('/api/todo', requestData)
   }
 }

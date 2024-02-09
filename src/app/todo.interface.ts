@@ -28,3 +28,17 @@ export interface GetResultObject {
     message: string;
     data: ToDoTask[]
 }
+
+export interface getPostObject {
+    status: string;
+    message: string;
+}
+
+export interface addTaskInterface {
+    title: string;
+    description: string;
+    priorityLevel: number;
+    status: TodoStatus;
+    dueDate: string;
+    Tags: TaskTags[]
+}
